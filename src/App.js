@@ -5,9 +5,19 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
        <h1>Welcome to our web app</h1>
 
 
+=======
+      <div class="header">
+        <a href = "/" class="title">bucketlist</a>
+      </div>
+
+      <div class="map">
+        <p> map placeholder </p>
+      </div>
+>>>>>>> f8c5f51b69c085c4e8f7b3d5a4991c09d41bbb84
     </div>
   );
 }
