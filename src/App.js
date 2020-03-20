@@ -5,7 +5,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-       <h1>Welcome to our web app</h1>
+      <div class="header">
+        <a href = "/" class="title">bucketlist</a>
+      </div>
+
+      <div class="map">
+        <p> map placeholder </p>
+      </div>
     </div>
   );
 }
