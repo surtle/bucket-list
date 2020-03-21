@@ -21,6 +21,11 @@ const firebaseConfig = {
   measurementId: "G-GX1SX7KKYV"
 };
 
+firebase.initializeApp(firebaseConfig);
+
+// get reference to database service
+var database = firebase.database();
+
 // =================================================================
 
 const mapStyles = {
