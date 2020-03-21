@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './App.css';
-import MapContainer from './MapContainer';
-import FlexView from 'react-flexview';
-
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import "./App.css";
+import MapContainer from "./MapContainer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 // ===================== FIREBASE SETUP ============================
 
@@ -30,39 +31,49 @@ var database = firebase.database();
 
 // =================================================================
 
-const mapStyles = {
-  width: '100%',
-  height: '100%'
-};
-
 function App() {
-  
+  let dropDownStyle = {
+    color: 'white'
+  };
   return (
     <div className="App">
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+      />
+
       <div class="header">
-        <a href = "/" class="title">bucketlist</a>
+        <a href="/" class="title">
+          bucketlist
+        </a>
+        <div class = "dropdown"> 
+        <DropdownButton class = "dropdown" style = {dropDownStyle} id="dropdown-basic-button" title="Menu">
+          <Dropdown.Item href="#/action-1">Login</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">About</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">My Itinerary</Dropdown.Item>
+        </DropdownButton>
+        </div>
       </div>
-
-
-      <div class = "list" >
-        <ul class = "menu">
-            <li>Sign in</li>
-            <li>About</li>
-            <li>My Itinerary</li> 
-        </ul>
+      <div class="column-layout">
+        <div class="list">
+          <div class="list-inner">
+            <span class="menu"> Login </span>
+            <span class="menu"> About </span>
+            <span class="menu"> Itinerary </span>
+          </div>
+          <div class="intro">
+            <h3> How to Start</h3>
+            <p> This is a guide of how to start using this web application</p>
+          </div>
+        </div>
+        <div class="map">
+          <MapContainer />
+        </div>
       </div>
-      
-      <div>
-        <MapContainer/>
-      </div>
-      
-      
-
     </div>
   );
- 
 }
 
-
-
-export default App
+export default App;
