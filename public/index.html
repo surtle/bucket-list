@@ -28,6 +28,31 @@
     <title>React App</title>
   </head>
   <body>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAj52JUY4jm-SQU5td6zPyiBNWyX0x-5l4",
+        authDomain: "bucketlist-c95a0.firebaseapp.com",
+        databaseURL: "https://bucketlist-c95a0.firebaseio.com",
+        projectId: "bucketlist-c95a0",
+        storageBucket: "bucketlist-c95a0.appspot.com",
+        messagingSenderId: "300377193585",
+        appId: "1:300377193585:web:b2d856768f2dc4f6d36fd0",
+        measurementId: "G-GX1SX7KKYV"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
