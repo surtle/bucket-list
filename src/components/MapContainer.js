@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
-import "assets/App.css";
-import CurrentLocation from "Map";
+import "assets/App.scss";
+import CurrentLocation from "components/Map";
 
 const mapStyles = {
   width: "100%",
