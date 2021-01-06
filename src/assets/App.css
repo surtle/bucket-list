@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 body {
   background-color: #f5f5f5;
 }
@@ -24,7 +26,7 @@ a.title:hover {
   background-color: #26798E;
   color: #f5f5f5;
   padding: 20px;
-  font-family: 'Lora', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 24px;
 }
 
@@ -32,7 +34,7 @@ a.title:hover {
   background-color: #26798E;
   color: #f5f5f5;
   padding: 20px;
-  font-family: 'Lora', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 24px;
   text-align: center;
 }
@@ -42,7 +44,7 @@ a.title:hover {
   color: #f5f5f5;
   padding-top: 10px;
   padding-bottom: 5px;
-  font-family: 'Lora', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 17px;
  
 }
@@ -60,7 +62,7 @@ a.title:hover {
 
 .App {
   text-align: center;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .App-logo {

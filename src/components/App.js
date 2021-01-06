@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
-import MapContainer from './MapContainer';
+import 'assets/App.css';
+import MapContainer from 'components/MapContainer';
 import FlexView from 'react-flexview';
 
 
@@ -43,7 +43,6 @@ function App() {
         <a href = "/" class="title">bucketlist</a>
       </div>
 
-
       <div class = "list" >
         <ul class = "menu">
             <li>Sign in</li>
@@ -55,14 +54,9 @@ function App() {
       <div>
         <MapContainer/>
       </div>
-      
-      
-
     </div>
   );
  
 }
-
-
 
 export default App

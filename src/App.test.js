@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
-impotr {Map} from '.GoogleMap.js';
+import App from './components/App';
+import {Map} from '.GoogleMap.js';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);

@@ -1,0 +1,41 @@
+.button {
+  background-color: #FFFFFF;
+  border-radius: 35px;
+  color: #0097D8;
+  cursor: pointer;
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 36px;
+  margin: 20px;
+  min-width: 220px;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  color: #0097D8;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-shadow: none;
+  transition: 500ms linear 0s;
+  -moz-transition: 500ms linear 0s;
+  -o-transition: 500ms linear 0s;
+  -webkit-transition: 500ms linear 0s;
+}
+  
+button:hover {
+  animation: glow .5s inifinite alternate;
+  background: transparent;
+  border-color: #F5F5F5;
+  border: 3px solid;
+  box-sizing: border-box;
+  color: #F5F5F5;
+  text-shadow: -1px 1px 8px #8bd4f3, 1px -1px 8px #8bd4f3;
+}
