@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import 'assets/App.css';
-import MapContainer from 'components/MapContainer';
+import 'assets/App.scss';
+import Sidebar from 'components/Sidebar.js';
+import UpcomingTrips from 'components/UpcomingTrips.js';
+import PlacesToGo from 'components/PlacesToGo.js';
 import FlexView from 'react-flexview';
 
 
@@ -30,29 +32,18 @@ var database = firebase.database();
 
 // =================================================================
 
-const mapStyles = {
-  width: '100%',
-  height: '100%'
-};
-
 function App() {
-  
   return (
-    <div className="App">
-      <div class="header">
-        <a href = "/" class="title">bucketlist</a>
-      </div>
+    <div className="app">
+      <Sidebar />
 
-      <div class = "list" >
-        <ul class = "menu">
-            <li>Sign in</li>
-            <li>About</li>
-            <li>My Itinerary</li> 
-        </ul>
-      </div>
-      
-      <div>
-        <MapContainer/>
+      <div className="main">
+        <div className="widget">
+          <UpcomingTrips />
+        </div>
+        <div className="widget">
+          <PlacesToGo />
+        </div>
       </div>
     </div>
   );
