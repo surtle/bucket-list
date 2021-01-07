@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import 'assets/App.scss';
 import Sidebar from 'components/Sidebar.js';
-import Button from 'components/Button.js';
+import UpcomingTrips from 'components/UpcomingTrips.js';
+import PlacesToGo from 'components/PlacesToGo.js';
 import FlexView from 'react-flexview';
 
 
@@ -37,6 +38,12 @@ function App() {
       <Sidebar />
 
       <div className="main">
+        <div className="widget">
+          <UpcomingTrips />
+        </div>
+        <div className="widget">
+          <PlacesToGo />
+        </div>
       </div>
     </div>
   );

@@ -6,15 +6,15 @@ export class Sidebar extends Component {
     render() {
         return (
             <div className="sidebar">
-                <a href = "/" className="title">bucketlist</a>
+                <a href = "/" className="title">BucketList</a>
                 <div className="navigation">
                 <ul>
                     <a href="/"><li>trips</li></a>
-                    <li>destinations</li>
-                    <li>map</li>
-                    <li>explore</li>
-                    <li>profile</li>
-                    <li>friends</li>
+                    <a href="/"><li>destinations</li></a>
+                    <a href="/"><li>map</li></a>
+                    <a href="/"><li>explore</li></a>
+                    <a href="/"><li>profile</li></a>
+                    <a href="/"><li>friends</li></a>
                 </ul>
                 </div>
             </div>

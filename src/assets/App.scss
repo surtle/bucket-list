@@ -21,7 +21,20 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 3%;
+    padding: 3em;
+  }
+
+  .main {
+    width: 100%;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .widget {
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid $lighter-gray;
   }
 
   a.title, a.title:hover {
@@ -48,6 +61,7 @@ html, body {
     font-family: $quicksand;
     letter-spacing: 0.1em;
     list-style-type: none;
+    padding-left: 0px;
 
     li {
       color: $white;
