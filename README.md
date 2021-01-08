@@ -17,3 +17,6 @@ BucketList is a web-app designed to help people compile their desired destinatio
 
 1. Ensure you are in the repository directory and run `npm install` to install package dependencies.
 2. Run `npm start` to run the app.
+
+
+[figma](https://www.figma.com/file/JkzgI12Q9WoW5TYXzsus4L/Untitled?node-id=0%3A1)
