@@ -1,0 +1,92 @@
+@import 'assets/utils.scss';
+// NOTE: the order of these styles DO matter
+
+.CalendarDay {
+    font-family: $quicksand;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+// Will edit everything selected including everything between a range of dates
+  .CalendarDay__selected_span {
+    background: $light-blue; //background
+    color: white; //text
+    border: 1px solid $blue; //default styles include a border
+  }
+
+  .CalendarDay__selected_span:hover {
+    background: $green; //background
+  }
+  
+  // Will edit selected date or the endpoints of a range of dates
+  .CalendarDay__selected {
+    background: $dark-blue;
+    color: white;
+  }
+  
+  // Will edit when hovered over. _span style also has this property
+  .CalendarDay__selected:hover {
+    background: $teal;
+    color: white;
+  }
+  
+  // Will edit when the second date (end date) in a range of dates
+  // is not yet selected. Edits the dates between your mouse and said date
+  .CalendarDay__hovered_span:hover,
+  .CalendarDay__hovered_span {
+    background: $green;
+  }
+
+.CalendarMonth_caption {
+    font-family: $quicksand;
+    color: #484848;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 37px;
+    caption-side: initial;
+}
+
+.DayPicker_weekHeader_ul {
+    font-family: $quicksand;
+    list-style: none;
+    margin: 1px 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 14px;
+}
+
+.DateInput {
+    margin: 10px;
+    padding: 0;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    vertical-align: middle;
+}
+
+.DateInput_input {
+    font-family: $quicksand;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 24px;
+    color: #484848;
+    background-color: #fff;
+    width: 100%;
+    padding: 5px 5px 3px;
+    border: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid transparent;
+    border-left: 0;
+    border-radius: 0;
+    text-align: center;
+}
+
+.DateRangePickerInput__withBorder {
+    border-radius: 10px;
+    border: 1px solid $lighter-gray;
+}

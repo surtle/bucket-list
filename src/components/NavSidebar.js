@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import "assets/App.scss"
 
-export class Sidebar extends Component {
+export class NavSidebar extends Component {
     render() {
         return (
             <div className="sidebar">
@@ -22,4 +21,4 @@ export class Sidebar extends Component {
       }
 }
 
-export default Sidebar
+export default NavSidebar

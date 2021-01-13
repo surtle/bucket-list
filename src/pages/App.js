@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import 'assets/App.scss';
-import Sidebar from 'components/Sidebar.js';
+import NavSidebar from 'components/NavSidebar.js';
 import UpcomingTrips from 'components/UpcomingTrips.js';
 import PlacesToGo from 'components/PlacesToGo.js';
-import FlexView from 'react-flexview';
 
 
 // ===================== FIREBASE SETUP ============================
@@ -27,15 +25,12 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-// get reference to database service
-var database = firebase.database();
-
 // =================================================================
 
 function App() {
   return (
     <div className="app">
-      <Sidebar />
+      <NavSidebar />
 
       <div className="main">
         <div className="widget">

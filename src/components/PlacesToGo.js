@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PreviewModule from "components/PreviewModule.js";
 import "assets/Summaries.scss";
 

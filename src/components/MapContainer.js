@@ -4,8 +4,8 @@ import "assets/App.scss";
 import CurrentLocation from "components/Map";
 
 const mapStyles = {
-  width: "100%",
-  height: "100%"
+  width: "50%",
+  height: "90%"
 };
 
 export class MapContainer extends Component {
@@ -31,12 +31,11 @@ export class MapContainer extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="map-container">
         <CurrentLocation
           centerAroundCurrentLocation
           google={this.props.google}
           zoom={14}
-          style={mapStyles}
         >
           <Marker onClick={this.onMarkerClick} name={"current location"} />
 

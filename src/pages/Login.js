@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import 'assets/Login.scss';
 import Button from 'components/Button.js'
 
-function Login() {
-    return (
+class Login extends Component {
+    render () {
+        return (
         <div className="login">
             <a href = "/" class="title">BucketList</a>
 
@@ -13,7 +13,8 @@ function Login() {
                 <Button url="/login" text="sign up" />
             </div>
         </div>
-    );
-  }
+        );
+    }
+}
   
-  export default Login
+export default Login
