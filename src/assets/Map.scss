@@ -53,6 +53,44 @@
             top: 15%;
             bottom: 0;
             right: 0;
+
+            .searchbox {
+
+                display: flex;
+                flex-direction: row;
+                position: absolute; 
+                top: 5%;
+                left: 5%;
+                align-items: center;
+    
+                .button {
+                    border: 0px;
+                    color: $white;
+                    font-size: 20px;
+                    background-color: $blue;
+                    padding: 10px 30px;
+                    min-width: auto;
+                    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.25);
+                }
+    
+                button:hover {
+                    animation: glow .5s inifinite alternate;
+                    background-color: $dark-blue;
+                }
+
+                input {
+                    height: auto;
+                    width: 500px;
+                    font-family: $quicksand;
+                    font-size: 20px;
+                    color: $gray;
+                    z-index: 10;
+                    border-radius: 10px;
+                    border: 0px;
+                    padding: 10px;
+                    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.25);
+                }
+            }
         }
     }
 
@@ -70,16 +108,31 @@
         z-index: 1;
 
         .trip-details {
-            padding-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        .checkbox {
+            margin-top: 15px;
+            font-family: $quicksand;
+            font-size: 18px;
+            color: $light-gray;
+
+            .checkbox-circle label::before {
+                border-radius: 50%; 
+            }
+
+            .checkbox-circle input[type="checkbox" i] {
+                border-radius: 50%;
+            }
         }
 
         .trip-destinations {
-            padding-bottom: 30px;
+            padding: 10px;
             flex-grow: 1;
+            overflow: auto;
 
             .destinations {
-
-                flex-grow: 1;
+                flex: 1;
 
                 .default-message {
                     font-family: $quicksand;

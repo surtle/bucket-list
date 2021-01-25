@@ -59,12 +59,12 @@
 }
 
 .DateInput {
-    margin: 10px;
+    margin: 7px;
     padding: 0;
     background: #fff;
     position: relative;
     display: inline-block;
-    width: 130px;
+    min-width: 130px;
     vertical-align: middle;
 }
 
@@ -72,11 +72,11 @@
     font-family: $quicksand;
     font-weight: 200;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 20px;
     color: #484848;
     background-color: #fff;
     width: 100%;
-    padding: 5px 5px 3px;
+    padding: 3px 3px 3px;
     border: 0;
     border-top: 0;
     border-right: 0;

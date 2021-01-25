@@ -5,7 +5,7 @@ export class PreviewModule extends Component {
     render() {
         return (
             <div className="trip">
-                <img src={this.props.image_url}></img>
+                <img src={this.props.image_url} alt=""></img>
                 <h2>{this.props.trip_name}</h2>
                 <p className="descriptor">{this.props.descriptor}</p>
             </div>

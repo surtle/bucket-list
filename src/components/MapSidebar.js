@@ -5,6 +5,7 @@ import 'react-dates/initialize';
 import Button from "components/Button.js";
 import DateRangePickerWrapper from 'components/DateRangePickerWrapper.js';
 import Destination from './Destination';
+import { isEmpty } from 'lodash';
 
 
 let destination1 = {
@@ -16,34 +17,38 @@ var mockDestinations = [destination1];
 
 class MapSidebar extends Component {
 
-    processDestinations(props) {
-        let destinationList;
-
-        if (props.destinations.length > 0) {
-            destinationList = props.destinations.map(d =>
-                <Destination
-                    destinationName={d.destinationName}
-                    destinationAddr={d.destinationAddr}
-                />
-            );
-
-            return destinationList;
-        } else {
-            return (<p className="default-message"> Add some destinations to get started! </p>);
-        }
-    };
+    processPlaces(placesList) {
+        return placesList.map((p) => [p.place_id, p.name, p.formatted_address]);
+    }
 
     render() {
+
+        let formattedPlaces = this.processPlaces(this.props.places);
+
         return (
             <div className="map-sidebar">
+                <h2>Trip Details</h2>
                 <div className="trip-details">
-                    <h2>Trip Details</h2>
                     <DateRangePickerWrapper />
+                    <div className="checkbox">
+                        <input type="checkbox" className="checkbox-circle" id="specified_dates"></input>
+                        <label> I have no set dates</label>
+                    </div>
                 </div>
+                <h2>Destinations</h2>
                 <div className="trip-destinations">
-                    <h2>Destinations</h2>
                     <div className="destinations">
-                        <this.processDestinations destinations={mockDestinations} />
+                        {!isEmpty(formattedPlaces) && formattedPlaces.map((place) => (
+                            <Destination
+                                destinationId={place[0]}
+                                destinationName={place[1]}
+                                destinationAddr={place[2]}
+                                removePlaceCallback={this.props.removePlaceCallback}
+                            />
+                        ))}
+                        {isEmpty(formattedPlaces) &&
+                            <p className="default-message"> Add some destinations to get started! </p>
+                        }
                     </div>
                 </div>
                 <div className="submit-button">

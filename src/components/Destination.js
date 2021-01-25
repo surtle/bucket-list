@@ -3,6 +3,11 @@ import deleteButton from 'assets/delete-icon.svg';
 import 'assets/Destination.scss';
 
 class Destination extends Component {
+
+    handleRemove = () => {
+        this.props.removePlaceCallback(this.props.destinationId);
+    }
+
     render() {
         return (
             <div className="destination">
@@ -11,7 +16,7 @@ class Destination extends Component {
                     <p className="destination-addr">{this.props.destinationAddr}</p>
                 </div>
                 <div className="remove-button">
-                    <img src={deleteButton} alt="remove destination"></img>
+                    <img src={deleteButton} alt="remove destination" onClick={this.handleRemove}></img>
                 </div>
             </div>
         )
